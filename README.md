@@ -8,9 +8,9 @@ This repository includes the input files and scripts needed to replicate the ***
 
 To replicate our main results, you'll need to:
 
-1. Access three different programs: `Latent GOLD 5.1` or `6.0` (to estimate latent class models); `Stata` (to estimate multinomial regressions with clustered standard errors); and `R` (to estimate path models).
+1. Use three different programs: `Latent GOLD 5.1` or `6.0` (to estimate latent class models); `Stata` (to estimate multinomial regressions with clustered standard errors); and `R` (to estimate path models).
 
-2. Retrieve files from the three subfolders included in this repository.[^1]
+2. Retrieve files from the three (*non-renv*) subfolders included in this repository.[^1]
 
 3. Modify the "outfile" in your Latent GOLD syntax by specifying your desired file name (e.g., `classifications.sav`).[^2]
 
