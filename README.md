@@ -10,6 +10,6 @@ To replicate our main results, you'll need:
 
 1. Access to three different programs: `Latent GOLD 5.1` (to estimate our latent class models); `Stata` (to estimate our multinomial regressions with clustered standard errors); and `R` (to estimate our path models).
 
-2. To modify the "outfile" in Latent GOLD (under options) by specifying your desired file name/path for an output file featuring posterior membership probabilities and modal classes for every respondent (make sure this file name ends in either `.csv` or `.sav`).
+2. To modify the "outfile" in your Latent GOLD syntax file: under options, specify your desired file name for an output file containing posterior membership probabilities and modal classes for every respondent (but make sure that this file name ends in either `.csv` or `.sav`).
 
 3. To run `renv::restore()` in R before estimating the different path models. 
