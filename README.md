@@ -6,10 +6,12 @@ This repository includes the input files and scripts needed to replicate the ***
 
 ## What you'll need
 
-To replicate our main results, you'll need:
+To replicate our main results, you'll need to:
 
-1. Access to three different programs: `Latent GOLD` version 5.1 or 6.0 (to estimate latent class models); `Stata` (to estimate multinomial regressions with clustered standard errors); and `R` (to estimate path models).
+1. Access three different programs: `Latent GOLD 5.1` or `6.0` (to estimate latent class models); `Stata` (to estimate multinomial regressions with clustered standard errors); and `R` (to estimate path models).
 
-2. To modify the "outfile" in your Latent GOLD syntax file: under options, specify your desired file name for an output file containing posterior membership probabilities and modal classes for every respondent (but make sure that this file name ends in either `.csv` or `.sav`).
+2. Retrieve files from the three subfolders included in this repository.^[You can view all the scripts (inclusive of the `.do` and `.lgs` files) by opening `gpt_threat.Rproj` in R Studio and exploring the contents of the subfolders.]
 
-3. To run `renv::restore()` in R before estimating the different path models. 
+3. Modify the "outfile" in your Latent GOLD syntax by specifying your desired file name (e.g., `classifications.sav`).^[Make sure that this file name ends in either `.csv` or `.sav`.]
+
+4. To run `renv::restore()` in R before estimating the different path models. 
