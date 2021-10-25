@@ -20,6 +20,8 @@ options
    output      
       parameters=first  betaopts=wl standarderrors loadings bivariateresiduals
       reorderclasses;
+ outfile  'ENTER FILE NAME AND PATH'
+      classification      keep gpt_id;
 variables
    caseweight adj_weight;
    dependent state, country, continent, ancestry, birth_in_country,
