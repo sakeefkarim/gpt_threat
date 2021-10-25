@@ -1,0 +1,72 @@
+//LG5.1//
+version = 5.1
+infile 'C:\Users\sakee\Dropbox\Replication Materials\Latent Class Analysis\LCA_GPT.sav'
+
+
+model
+title Model1;
+options
+   maxthreads=4;
+   algorithm 
+      tolerance=1e-008 emtolerance=0.01 emiterations=250 nriterations=50 ;
+   startvalues
+      seed=0 sets=16 tolerance=1e-005 iterations=50;
+   bayes
+      categorical=1 variances=1 latent=1 poisson=1;
+   montecarlo
+      seed=0 sets=0 replicates=500 tolerance=1e-008;
+   quadrature  nodes=10;
+   missing  includeall;
+   output      
+      parameters=first  betaopts=wl standarderrors loadings bivariateresiduals
+      reorderclasses;
+variables
+   caseweight adj_weight;
+   dependent state, country, continent, ancestry, birth_in_country,
+      citizenship, attachment, language, obeying_laws, living_in_nation,
+      religion, arts, democracy, economy, equality, history, armed_forces,
+      political_influence, science, sport, social_safety, best_citizenship,
+      better_than_most, others_should_be_like_us, always_support, never_ashamed;
+   independent cntry_name, year nominal;
+   latent
+      Cluster nominal 4;
+equations
+   Cluster <- 1 + cntry_name + year;
+   state <- 1 + Cluster;
+   country <- 1 + Cluster;
+   continent <- 1 + Cluster;
+   ancestry <- 1 + Cluster;
+   birth_in_country <- 1 + Cluster;
+   citizenship <- 1 + Cluster;
+   attachment <- 1 + Cluster;
+   language <- 1 + Cluster;
+   obeying_laws <- 1 + Cluster;
+   living_in_nation <- 1 + Cluster;
+   religion <- 1 + Cluster;
+   arts <- 1 + Cluster;
+   democracy <- 1 + Cluster;
+   economy <- 1 + Cluster;
+   equality <- 1 + Cluster;
+   history <- 1 + Cluster;
+   armed_forces <- 1 + Cluster;
+   political_influence <- 1 + Cluster;
+   science <- 1 + Cluster;
+   sport <- 1 + Cluster;
+   social_safety <- 1 + Cluster;
+   best_citizenship <- 1 + Cluster;
+   better_than_most <- 1 + Cluster;
+   others_should_be_like_us <- 1 + Cluster;
+   always_support <- 1 + Cluster;
+   never_ashamed <- 1 + Cluster;
+   country <-> state ;
+   continent <-> state ;
+   continent <-> country ;
+   citizenship <-> birth_in_country ;
+   living_in_nation <-> birth_in_country ;
+   history <-> arts ;
+   political_influence <-> democracy ;
+   science <-> arts ;
+   sport <-> arts ;
+   sport <-> science ;
+   others_should_be_like_us <-> better_than_most ;
+end model
