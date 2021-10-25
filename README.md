@@ -14,7 +14,7 @@ To replicate our main results, you'll need to:
 
 3. Modify the "outfile" in your Latent GOLD syntax by specifying your desired file name (e.g., `classifications.sav`).[^2]
 
-4. To run `renv::restore()` in R before estimating the different path models. 
+4. Run `renv::restore()` in R before estimating the different path models. 
 
 
 [^1]: To view all the scripts (inclusive of the `.do` and `.lgs` files), open `gpt_threat.Rproj` in R Studio and then explore the contents of the subfolders.
